@@ -15,3 +15,10 @@
 //= require rails-ujs
 //= require semantic-ui
 //= require_tree .
+
+$(function(){
+  $(".message.closable .close.icon").on("click", function(){
+    $(".message.closable").fadeOut("slow");
+    return false;
+  });
+})
