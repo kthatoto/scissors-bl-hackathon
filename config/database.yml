@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: scissors_production
   username: scissors
   password: <%= ENV['SCISSORS_DATABASE_PASSWORD'] %>
