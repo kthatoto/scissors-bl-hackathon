@@ -1,0 +1,13 @@
+
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+    <a href="#" class="header item">
+      <%= image_tag "logo.png", class: "logo" %>
+      かりる
+    </a>
+    <a href="#" class="ui simple dropdown item">かす</a>
+    <div class="right menu">
+      <%= link_to "ログアウト", :destroy_user_session, method: :delete %>
+    </div>
+  </div>
+</div>
