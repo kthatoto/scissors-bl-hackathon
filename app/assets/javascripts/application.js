@@ -18,7 +18,6 @@
 
 $(function(){
   $(".message.closable .close.icon").on("click", function(){
-    $(".message.closable").fadeOut("slow");
-    return false;
+    $(".message.closable").slideToggle();
   });
 })
