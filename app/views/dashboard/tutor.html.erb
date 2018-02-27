@@ -9,8 +9,9 @@
     </div>
   </div>
 
+  <center>
   <div class="ui card">
-    <div class="image">
+    <div class="image" style="padding: 20px;">
       <% if @current_user.gender.nil? %>
         <%= image_tag "no-gender.jpg" %>
       <% else %>
@@ -25,10 +26,11 @@
       <div class="description"><%= @current_user.region_jp %></div>
     </div>
     <div class="extra content">
-      <%= link_to [:edit, @current_user] do %>
+      <%= link_to [:edit, @current_user, page: :tutor] do %>
         <i class="user icon"></i> 編集
       <% end %>
     </div>
   </div>
+  </center>
 
 </div>
