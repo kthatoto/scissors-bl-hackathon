@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   get 'tutor' => 'dashboard#tutor'
   get 'student' => 'dashboard#student'
+
+  resources :users, only: [:edit, :update]
 end

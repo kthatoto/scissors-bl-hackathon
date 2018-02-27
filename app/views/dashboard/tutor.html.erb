@@ -13,7 +13,7 @@
     <div class="image">
       <% if @current_user.gender.nil? %>
         <%= image_tag "no-gender.jpg" %>
-      <% else%>
+      <% else %>
         <%= image_tag "#{@current_user.gender == 0 ? "male" : "female"}.png" %>
       <% end %>
     </div>
@@ -25,10 +25,9 @@
       <div class="description"><%= @current_user.region_jp %></div>
     </div>
     <div class="extra content">
-      <a>
-        <i class="user icon"></i>
-        <%# 22 Friends %>
-      </a>
+      <%= link_to [:edit, @current_user] do %>
+        <i class="user icon"></i> 編集
+      <% end %>
     </div>
   </div>
 

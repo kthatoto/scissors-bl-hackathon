@@ -14,7 +14,7 @@ class User < ApplicationRecord
     return "性別未設定"
   end
   def region_jp
-    return region if region
+    return region if region.present?
     return "地域未設定"
   end
 end
