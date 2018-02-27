@@ -1,10 +1,10 @@
 
 <div class="ui fixed inverted menu grid page navbar">
   <div class="ui container">
-    <a href="#" class="header item">
+    <%= link_to :root, class: "header item" do %>
       <%= image_tag "logo.png", class: "logo" %>
       Scissors
-    </a>
+    <% end %>
     <div class="ui right item">
       <i class="power off icon"></i>
       <%= link_to "ログアウト", :destroy_user_session, method: :delete %>
