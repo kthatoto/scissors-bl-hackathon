@@ -1,0 +1,27 @@
+
+<div class="column">
+  <div class="center aligned starter column">
+    <center><h2 class="ui header">ユーザー情報登録</h2></center>
+    <div class="ui card"style="margin: 0 auto;">
+      <div class="image" style="padding: 20px;">
+        <% if @current_user.gender.nil? %>
+          <%= image_tag "no-gender.jpg" %>
+        <% else %>
+          <%= image_tag "#{@current_user.gender == 0 ? "male" : "female"}.png" %>
+        <% end %>
+      </div>
+      <div class="content">
+        <a class="header"><%= @current_user.name ? @current_user.name : "名前未設定" %></a>
+        <div class="meta">
+          <span class="date"><%= @current_user.gender_jp %></span>
+        </div>
+        <div class="description"><%= @current_user.region_jp %></div>
+      </div>
+      <div class="extra content">
+        <%= link_to [:edit, @current_user, page: page] do %>
+          <i class="user icon"></i> 編集
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
