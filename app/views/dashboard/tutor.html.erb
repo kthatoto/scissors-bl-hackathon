@@ -61,9 +61,10 @@
             <td>
               <h2 class="ui center aligned header"><%= o.date.strftime('%Y-%m-%d') %></h2>
             </td>
-            <td class="single line">
-              Power Output
-            </td>
+            <td><%= o.time_zone_jp %></td>
+            <td><%= o.hour %>h</td>
+            <td>¥<%= o.price %></td>
+            <td><%= o.sale_jp %></td>
           </tr>
         <% end %>
       <% else %>
