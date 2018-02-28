@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'student' => 'dashboard#student'
 
   resources :users, only: [:edit, :update]
+  resources :cars, only: [:new, :create]
 end

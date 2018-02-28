@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

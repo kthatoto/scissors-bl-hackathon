@@ -1,0 +1,19 @@
+
+<div class="ui page grid" style="margin-top: 1em;">
+  <div class="ui page grid">
+    <div class="row">
+      <div class="example">
+
+        <%= form_with model: @car, local: true, class: "ui form" do |f| %>
+          <%= hidden_field_tag :user_id, value: @current_user.id %>
+          <div class="field">
+            <label>車両番号</label>
+            <%= text_field_tag :plate_number, '', placeholder: "1028" %>
+          </div>
+          <%= f.submit "設定", class: "ui button" %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
