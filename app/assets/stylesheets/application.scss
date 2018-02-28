@@ -19,3 +19,8 @@
 .ui.menu .item img.logo {
   margin-right: 1.5em;
 }
+
+.ui.huge.message.page.grid.center.aligned > * {
+  width: 100%;
+  text-align: center;
+}
