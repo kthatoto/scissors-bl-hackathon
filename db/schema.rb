@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20180228020316) do
   create_table "opportunities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.datetime "date"
     t.integer "time_zone"
     t.integer "hour"

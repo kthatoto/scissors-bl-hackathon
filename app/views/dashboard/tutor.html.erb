@@ -55,22 +55,24 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          <h2 class="ui center aligned header">A</h2>
-        </td>
-        <td class="single line">
-          Power Output
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h2 class="ui center aligned header">A</h2>
-        </td>
-        <td class="single line">
-          Weight
-        </td>
-      </tr>
+      <% if @opportunities.any? %>
+        <% @opportunities.each do |o| %>
+          <tr>
+            <td>
+              <h2 class="ui center aligned header"><%= o.date.strftime('%Y-%m-%d') %></h2>
+            </td>
+            <td class="single line">
+              Power Output
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
+        <tr>
+          <td>
+            <h2 class="ui center aligned header">登録なし</h2>
+          </td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 

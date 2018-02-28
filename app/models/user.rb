@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :car
+  has_many :opportunities
 
   def meeting?
     !!(name && gender && region)

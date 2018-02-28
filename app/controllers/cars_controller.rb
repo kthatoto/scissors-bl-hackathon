@@ -39,6 +39,7 @@ class CarsController < ApplicationController
           maturity: maturity
         )
       end
+      flash[:notice] = "自動車を登録しました。"
     else
       flash[:alert] = "自動車が見つかりませんでした。"
     end
