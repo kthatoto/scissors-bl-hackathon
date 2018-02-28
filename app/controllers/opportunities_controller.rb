@@ -7,4 +7,11 @@ class OpportunitiesController < ApplicationController
     @opportunities = Opportunity.all
     # @opportunities = Opportunity.where(opp_arel.gteq(from_date).and(opp_arel.lteq(to_date)))
   end
+
+  def update
+    opp = Opportunity.find(params[:id])
+    opp.update(is_sold: true)
+    flash[:notice] = "予約が完了しました。ドライブを楽しんでください！"
+    redirect_to :root
+  end
 end

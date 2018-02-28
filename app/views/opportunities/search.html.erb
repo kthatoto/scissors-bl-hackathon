@@ -20,7 +20,15 @@
             <td><%= o.time_zone_jp %></td>
             <td><%= o.hour %>h</td>
             <td>¥<%= o.price %></td>
-            <td><%= o.sale_jp %></td>
+            <td>
+              <% if o.is_sold %>
+                予約済み
+              <% else %>
+                <%= form_with model: o, local: true do |f| %>
+                  <%= f.submit "予約する", class: "ui button primary" %>
+                <% end %>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       <% else %>
