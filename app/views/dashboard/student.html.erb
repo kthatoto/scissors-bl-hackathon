@@ -1,4 +1,4 @@
-
+<div class="ui hidden divider"></div>
 <div class="ui page grid">
   <div class="row">
     <div class="column">
@@ -25,10 +25,10 @@
   <div class="row">
     <div class="example" style="margin:0 auto;">
 
-      <%= form_with url: [:search, :opportunities], local: true, class: "ui form" do |f| %>
+      <%= form_with url: [:search, :opportunities], local: true, method: :get, class: "ui form" do |f| %>
         <div class="field">
           <label>日にち</label>
-          <%= f.select :date, [["今日", 0], ["3日以内", 3], ["1週間以内", 7], ["2週間以内", 14], ["1ヶ月以内", 30]], {}, {class: "ui dropdown"} %>
+          <%= f.select :date, [["今日", 1], ["3日以内", 3], ["1週間以内", 7], ["2週間以内", 14], ["1ヶ月以内", 30]], {}, {class: "ui dropdown"} %>
         </div>
 
         <div class="field">

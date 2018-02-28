@@ -1,0 +1,35 @@
+<div class="ui hidden divider"></div>
+<div class="ui page grid">
+  <table class="ui celled padded table">
+    <thead>
+      <tr>
+        <th class="single line">貸出可能日</th>
+        <th>時間帯</th>
+        <th>貸出時間</th>
+        <th>設定料金</th>
+        <th>予約状況</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @opportunities.any? %>
+        <% @opportunities.each do |o| %>
+          <tr>
+            <td>
+              <h2 class="ui center aligned header"><%= o.date.strftime('%Y-%m-%d') %></h2>
+            </td>
+            <td><%= o.time_zone_jp %></td>
+            <td><%= o.hour %>h</td>
+            <td>¥<%= o.price %></td>
+            <td><%= o.sale_jp %></td>
+          </tr>
+        <% end %>
+      <% else %>
+        <tr>
+          <td>
+            <h2 class="ui center aligned header">検索結果なし</h2>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
