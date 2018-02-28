@@ -6,6 +6,7 @@ class CarsController < ApplicationController
   end
 
   def create
+    require 'net/http'
     uri = URI.parse("http://hackathon2018-02-dot-performanceresearch-1.appspot.com/Customer")
 
     req = Net::HTTP::Get.new(uri.path + "?CarMngNo=#{params[:plate_number]}")
