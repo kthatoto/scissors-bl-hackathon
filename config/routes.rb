@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
   resources :cars, only: [:new, :create]
+  resources :opportunities, only: [] do
+    collection do
+      get :search
+    end
+  end
 end
